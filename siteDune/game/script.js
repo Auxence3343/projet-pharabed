@@ -1,4 +1,4 @@
-const SPEED_SCALE = 0.00001;
+const SPEED_SCALE = 0.000001;
 
 const game = document.querySelector("#game");
 const scoreDisplay = document.querySelector("#score");
@@ -154,20 +154,35 @@ function getDinoRect() {
 }
 
 function setDinoLose() {
-  dino.src = "game/assets/egyptian.png";
+  dino.src = "game/assets/egyptian-02.png";
+  setTimeout(() => {
+    dino.src = "game/assets/egyptian-03.png";
+    setTimeout(() => {
+      dino.src = "game/assets/egyptian-04.png";
+      setTimeout(() => {
+        dino.src = "game/assets/egyptian-01.png";
+        setTimeout(() => {
+          dino.src = "game/assets/egyptian-02.png";
+          setTimeout(() => {
+            dino.src = "game/assets/egyptian-03.png";
+          }, 30)
+        }, 50)
+      }, 80)
+    }, 100)
+  }, 0)
 }
 
 function handleRun(delta, speedScale) {
   if (isJumping) {
     //dino.src = `game/assets/dino-stationary.png`;
-    dino.src = `game/assets/egyptian.png`;
+    dino.src = `game/assets/egyptian-00.png`;
     return;
   }
 
   if (currentFrameTime >= FRAME_TIME) {
     dinoFrame = (dinoFrame + 1) % DINO_FRAME_COUNT;
-    //dino.src = `game/assets/dino-run-${dinoFrame}.png`; /* switch between images to simulate movement */
-    dino.src = 'game/assets/egyptian.png';
+    dino.src = `game/assets/egyptian-0${dinoFrame}.png`; /* switch between images to simulate movement */
+    //dino.src = 'game/assets/egyptian.png';
     currentFrameTime -= FRAME_TIME;
   }
   currentFrameTime += delta * speedScale;
@@ -232,7 +247,7 @@ function getCactusRects() {
 
 function createCactus() {
   const cactus = document.createElement("img");
-  cactus.src = "game/assets/dancer.png";
+  cactus.src = "game/assets/dancerGIF.gif";
   cactus.classList.add("cactus");
   setCustomProperty(cactus, "--left", 100);
   game.append(cactus); 
