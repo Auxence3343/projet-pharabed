@@ -268,7 +268,6 @@ ol {
     left: 50%;
     margin-top: -13px;
     margin-left: -13px;
-    border-radius: 60px;
     animation: loader 0.8s linear forwards;
     -webkit-animation: loader 0.8s linear forwards;
 }
@@ -445,7 +444,7 @@ ol {
 .hero__slider.owl-carousel .owl-item.active .hero__text h2 {
   top: 0;
   opacity: 1;
-  padding-top: 30px;
+  padding-top: 10px;
 }
 .hero__slider.owl-carousel .owl-item.active .hero__text .primary-btn {
   top: 0;
