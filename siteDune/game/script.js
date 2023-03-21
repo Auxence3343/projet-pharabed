@@ -59,10 +59,10 @@ function updateScore(delta) {
 /* collision conditions */
 function checkCollision(rect1, rect2) {
   return (
-    rect1.left < rect2.right &&
-    rect1.top < rect2.bottom &&
-    rect1.right > rect2.left &&
-    rect1.bottom > rect2.top
+    rect1.left < rect2.right - 30 &&
+    rect1.top < rect2.bottom - 30  &&
+    rect1.right > rect2.left + 30 &&
+    rect1.bottom > rect2.top + 30 
   );
 }
 
@@ -150,7 +150,10 @@ function updateDino(delta, speedScale) {
 }
 
 function getDinoRect() {
-  return dino.getBoundingClientRect(); /* get the dinosaur hitbox */
+  let bcr = dino.getBoundingClientRect();
+  bcr.left = bcr.left - (bcr.left * 0.9);
+  bcr.right = bcr.right - (bcr.right * 0.9);
+  return bcr /* get the dinosaur hitbox */
 }
 
 function setDinoLose() {
@@ -241,7 +244,10 @@ function updateCactus(delta, speedScale) {
 
 function getCactusRects() {
   return [...document.querySelectorAll(".cactus")].map(cactus => {
-    return cactus.getBoundingClientRect(); /* get the hitbox of all the cactus on the screen */
+    let bcr = cactus.getBoundingClientRect();
+    bcr.left = bcr.left - (bcr.left * 0.5);
+    bcr.right = bcr.right - (bcr.right * 0.5);
+    return bcr; /* get the hitbox of all the cactus on the screen */
   })
 }
 
