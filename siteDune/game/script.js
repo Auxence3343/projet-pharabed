@@ -1,4 +1,4 @@
-const SPEED_SCALE = 0.000001;
+const SPEED_SCALE = 0.000010;
 
 const game = document.querySelector("#game");
 const scoreDisplay = document.querySelector("#score");
@@ -59,8 +59,8 @@ function updateScore(delta) {
 /* collision conditions */
 function checkCollision(rect1, rect2) {
   return (
-    rect1.left < rect2.right - 30 &&
-    rect1.top < rect2.bottom - 30  &&
+    rect1.left < rect2.right - 10 &&
+    rect1.top < rect2.bottom - 10  &&
     rect1.right > rect2.left + 30 &&
     rect1.bottom > rect2.top + 30 
   );
@@ -123,7 +123,7 @@ function updateGround(delta, speedScale) {
 /* DINOSAUR MOVEMENT */
 
 const dino = document.querySelector("#dino");
-const JUMP_SPEED = 0.45;
+const JUMP_SPEED = 0.4;
 const GRAVITY = 0.0015;
 const DINO_FRAME_COUNT = 2;
 const FRAME_TIME = 100;
@@ -214,7 +214,7 @@ function onJump(e) {
 /* ADD CACTUS */
 
 const CACTUS_SPEED = 0.05;
-const CACTUS_INTERVAL_MIN = 500;
+const CACTUS_INTERVAL_MIN = 600;
 const CACTUS_INTERVAL_MAX = 2000;
 
 let nextCactusTime;
@@ -253,7 +253,8 @@ function getCactusRects() {
 
 function createCactus() {
   const cactus = document.createElement("img");
-  cactus.src = "game/assets/dancerGIF.gif";
+  //cactus.src = "game/assets/dancerGIF.gif";
+  cactus.src = "game/assets/elo.png";
   cactus.classList.add("cactus");
   setCustomProperty(cactus, "--left", 100);
   game.append(cactus); 
