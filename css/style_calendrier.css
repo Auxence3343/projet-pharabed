@@ -2687,52 +2687,18 @@ ol {
   text-align: center;
 }
 
-@media (min-width: 992px) {
-  .td-event {
-    display: flexbox;
-    text-align: center;
-    vertical-align: middle !important;
-    align-items: center;
-    background-image: linear-gradient(#bc451a, #dc9042);
-    color: #ffffff;
-    font-size: 1.4em;
-    border-radius: 10px;
-    text-size-adjust: auto;
-    margin: 0;
-    padding: 0;
-  }
-}
-
-@media (min-width: 768px) and (max-width: 991px) {
-  .td-event {
-    display: flexbox;
-    text-align: center;
-    vertical-align: middle !important;
-    align-items: center;
-    background-image: linear-gradient(#bc451a, #dc9042);
-    color: #ffffff;
-    font-size: 1.2em;
-    border-radius: 10px;
-    text-size-adjust: auto;
-    margin: 0;
-    padding: 0;
-  }
-}
-
-@media (max-width: 767px) {
-  .td-event {
-    display: flexbox;
-    text-align: center;
-    vertical-align: middle !important;
-    align-items: center;
-    background-image: linear-gradient(#bc451a, #dc9042);
-    color: #ffffff;
-    font-size: 1.0em;
-    border-radius: 10px;
-    text-size-adjust: auto;
-    margin: 0;
-    padding: 0;
-  }
+.td-event {
+  display: flexbox;
+  text-align: center;
+  vertical-align: middle !important;
+  align-items: center;
+  background-image: linear-gradient(#bc451a, #dc9042);
+  color: #ffffff;
+  font-size: 3vw;
+  border-radius: 10px;
+  text-size-adjust: auto;
+  margin: 0;
+  padding: 0;
 }
 
 /* .table-active{
@@ -2769,10 +2735,13 @@ div.container {
   display: inline-block;
   margin: 0;
   padding: 0;
-  overflow-x: auto; /* Use horizontal scroller if needed */
-  white-space: pre-wrap; /* css-3 */
-  white-space: -moz-pre-wrap !important; /* Mozilla, since 1999 */
-  word-wrap: break-word; /* Internet Explorer 5.5+ */
-  white-space : normal;
+  overflow-x: auto;
+  /* Use horizontal scroller if needed */
+  white-space: pre-wrap;
+  /* css-3 */
+  white-space: -moz-pre-wrap !important;
+  /* Mozilla, since 1999 */
+  word-wrap: break-word;
+  /* Internet Explorer 5.5+ */
+  white-space: normal;
 }
-
