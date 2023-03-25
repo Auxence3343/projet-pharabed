@@ -152,6 +152,12 @@ function updateDino(delta, speedScale) {
   handleJump(delta);
 }
 
+function isTouchDevice() {
+  return (('ontouchstart' in window) ||
+     (navigator.maxTouchPoints > 0) ||
+     (navigator.msMaxTouchPoints > 0));
+}
+
 function getDinoRect() {
   let bcr = dino.getBoundingClientRect();
   bcr.left = bcr.left - (bcr.left * 0.9);
