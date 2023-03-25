@@ -1,5 +1,8 @@
 const SPEED_SCALE = 0.000010;
 
+var jump_sound = new Audio("./game/assets/jump.mp3")
+var game_over_sound = new Audio("./game/assets/game_over.mp3")
+
 const game = document.querySelector("#game");
 const scoreDisplay = document.querySelector("#score");
 const startMessage = document.querySelector("#start-message");
@@ -157,6 +160,7 @@ function getDinoRect() {
 }
 
 function setDinoLose() {
+  game_over_sound.play()
   dino.src = "game/assets/egyptian-02.png";
   setTimeout(() => {
     dino.src = "game/assets/egyptian-03.png";
@@ -208,6 +212,7 @@ function onJump(e) {
   if (e.code !== "Space" || isJumping) return;
 
   yVelocity = JUMP_SPEED;
+  jump_sound.play();
   isJumping = true;
 }
 
