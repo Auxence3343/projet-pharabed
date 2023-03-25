@@ -33,7 +33,6 @@ body {
   font-family: "Josefin Sans", sans-serif;
   -webkit-font-smoothing: antialiased;
   scroll-behavior: smooth;
-  background-image: url("/img/new/bg-1.jpg");
 }
 
 h1,
@@ -2503,6 +2502,7 @@ ol {
 }
 
 .td-event {
+  display:flexbox;
     text-align: center;
     vertical-align: middle!important;
     align-items: center;
@@ -2510,7 +2510,7 @@ ol {
     color:#ffffff;
     font-size: 1.2em;
     border-radius: 10px;
-    border:none!important
+    text-size-adjust: auto;
 }
 
 /* .table-active{
@@ -2518,11 +2518,13 @@ ol {
 } */
 
 .td-invisible{
+    min-width: 50px!important;
     visibility:hidden;
     border:none!important
 }
 .text-centered{
     text-align: center;
+    text-overflow: clip;
 }
 
 .table-container {
@@ -2531,6 +2533,9 @@ ol {
     table-layout : fixed;
 }
 
-.small-th {
-    width:10%;
+/*th.mobile { display: none }
+@media (max-width: 640px) {
+    th.mobile { display: block }
+    th.desktop { display: none }
 }
+*/

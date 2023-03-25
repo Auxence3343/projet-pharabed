@@ -202,7 +202,7 @@ let websites = ["https://www.instagram.com/cerzvre_pnenpgrer/", "https://youtu.b
         interval: 3000
     })
 
-    $.getJSON('https://www.whateverorigin.org/get?url=' + encodeURIComponent('https://pqfv.rezel.net/') + '&callback=?', function(data){
+    /*$.getJSON('https://www.whateverorigin.org/get?url=' + encodeURIComponent('https://pqfv.rezel.net/') + '&callback=?', function(data){
         //console.log(data.contents)
         var docRezel = document.createElement( 'html' );
         docRezel.innerHTML = data.contents.toString()
@@ -210,7 +210,7 @@ let websites = ["https://www.instagram.com/cerzvre_pnenpgrer/", "https://youtu.b
         var score = docRezel.querySelector("body > div.main_page > div > table > tbody > tr:nth-child(1) > td:nth-child(1) > h3 > span")
         console.log(score.innerHTML)
         $('.score-liste').text(score.innerHTML)
-    });
+    });*/
 
 
 })(jQuery);
